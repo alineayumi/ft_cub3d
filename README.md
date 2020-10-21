@@ -1,4 +1,7 @@
 # Cub3D
+This project is inspired by the world-famous eponymous 90’s game, which was the first FPS ever. It will enable you to explore **ray-casting**. Your goal will be to make a dynamic view inside a maze, in which you’ll have to find your way.
+
+## **The Original Game 🎮**
 
 [Wolfenstein 3D](https://en.wikipedia.org/wiki/Wolfenstein_3D) is the first true "First Person Shooter" in the history of video games 🙌
 
