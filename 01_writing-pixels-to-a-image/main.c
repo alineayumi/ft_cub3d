@@ -6,12 +6,13 @@
 /*   By: afukuhar <afukuhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 21:58:20 by afukuhar          #+#    #+#             */
-/*   Updated: 2020/10/31 00:55:04 by afukuhar         ###   ########.fr       */
+/*   Updated: 2020/10/31 01:19:13 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../mlx/mlx.h"
 #include "image.h"
+#include <math.h>
 
 void	my_mlx_pixel_put(t_data *data, int x, int y, int color)
 {
@@ -35,6 +36,22 @@ void	draw_square(t_data *data, int edge, int start_x, int start_y, int color)
 	}
 }
 
+void	draw_circle(t_data *data, int radius, int center_x, int center_y, int color)
+{
+	int i;
+	int x;
+	int y;
+
+	i = 0;
+	while (i < 360)
+	{
+		x = radius * cos(M_PI * i / 180);
+		y = radius * sin(M_PI * i / 180);
+		my_mlx_pixel_put(data, center_x + x, center_y - y, color);
+		i++;
+	}
+}
+
 int 	main(void)
 {
 	t_data	img;
@@ -52,6 +69,7 @@ int 	main(void)
     */
    img.addr = mlx_get_data_addr(img.img, &img.bits_per_pixel, &img.line_length, &img.endian);
    draw_square(&img, 100, 100, 100, 0x00FF0000);
+   draw_circle(&img, 50, 350, 150, 0x0000FF00);
    mlx_put_image_to_window(mlx, mlx_win, img.img, 0, 0);
    mlx_loop(mlx);
 }
