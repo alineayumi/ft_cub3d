@@ -6,7 +6,7 @@
 /*   By: afukuhar <afukuhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 00:18:05 by afukuhar          #+#    #+#             */
-/*   Updated: 2020/11/01 00:29:59 by afukuhar         ###   ########.fr       */
+/*   Updated: 2020/11/01 01:06:04 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,13 @@ typedef struct	s_line
 	int xf;
 	int yf;
 }				t_line;
+
+typedef struct	s_polygon
+{
+	int xc;
+	int yc;
+	int radius;
+	int sides;
+}				t_polygon;
 
 #endif
