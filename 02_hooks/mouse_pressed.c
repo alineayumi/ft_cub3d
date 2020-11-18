@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mouse_move.c                                       :+:      :+:    :+:   */
+/*   mouse_pressed.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afukuhar <afukuhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/17 23:26:16 by afukuhar          #+#    #+#             */
-/*   Updated: 2020/11/17 23:38:07 by afukuhar         ###   ########.fr       */
+/*   Created: 2020/11/17 23:41:43 by afukuhar          #+#    #+#             */
+/*   Updated: 2020/11/17 23:48:55 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hooks.h"
 
-int print_mouse_postion(int z, int x, int y, t_vars *vars)
+int print_mouse_postion(int button, int x, int y, t_vars *vars)
 {
-	printf("x: %d | y: %d | z: %d\n", x, y, z);
+	printf("x: %d | y: %d | button: %d\n", x, y, button);
 }
 
 int main(void)
