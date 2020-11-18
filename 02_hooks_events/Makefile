@@ -6,7 +6,7 @@
 #    By: afukuhar <afukuhar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/30 15:29:14 by afukuhar          #+#    #+#              #
-#    Updated: 2020/11/17 23:44:31 by afukuhar         ###   ########.fr        #
+#    Updated: 2020/11/18 00:11:27 by afukuhar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,9 @@ print_mouse_pressed:
 
 print_mouse_move:
 		@$(CC) mouse_move.c -g -lz -L../mlx -lmlx -framework OpenGL -framework AppKit -lm
+
+close_press_key:
+		@$(CC) hooking_into_events.c -g -lz -L../mlx -lmlx -framework OpenGL -framework AppKit -lm
 
 clean:
 		@/bin/rm -f $(OFILES)
