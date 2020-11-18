@@ -6,7 +6,7 @@
 /*   By: afukuhar <afukuhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 17:15:35 by afukuhar          #+#    #+#             */
-/*   Updated: 2020/11/18 00:07:02 by afukuhar         ###   ########.fr       */
+/*   Updated: 2020/11/18 00:17:13 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,6 @@ typedef struct	s_vars
 # define KEY_B			11
 # define KEY_N			45
 # define KEY_M			46
+# define KEY_ESC		53
 
 #endif
