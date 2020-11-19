@@ -6,7 +6,7 @@
 /*   By: afukuhar <afukuhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 12:09:59 by afukuhar          #+#    #+#             */
-/*   Updated: 2020/11/18 18:57:24 by afukuhar         ###   ########.fr       */
+/*   Updated: 2020/11/18 19:56:36 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,14 +87,14 @@ typedef struct					s_vars
 # define KEY_ESC				53
 
 // X11 EVENTS
-# define KeyPress				02
-# define KeyRelease				03
-# define ButtonPress			04
-# define ButtonRelease			05
-# define MotionNotify			06
-# define EnterNotify			07
-# define LeaveNotify			08
-# define FocusIn				09
+# define KeyPress				2
+# define KeyRelease				3
+# define ButtonPress			4
+# define ButtonRelease			5
+# define MotionNotify			6
+# define EnterNotify			7
+# define LeaveNotify			8
+# define FocusIn				9
 # define FocusOut				10
 # define KeymapNotify			11
 # define Expose					12
