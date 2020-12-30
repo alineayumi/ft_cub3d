@@ -6,7 +6,7 @@
 /*   By: afukuhar <afukuhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 17:14:42 by afukuhar          #+#    #+#             */
-/*   Updated: 2020/12/30 12:03:54 by afukuhar         ###   ########.fr       */
+/*   Updated: 2020/12/30 12:09:54 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,8 @@ int	main(void)
 	int img_w;
 	int img_h;
 	t_data		img;
+	int pos_x = 0;
+	int pos_y = 0;
 
 	vars.mlx = mlx_init();
 	vars.win = mlx_new_window(vars.mlx, 500, 500, "Using images!");
@@ -80,7 +82,18 @@ int	main(void)
 	printf("width: %d\n", img_w);
 	printf("heigth: %d\n", img_h);
 
-	mlx_put_image_to_window(vars.mlx, vars.win, img.img, 250, 250);
+	pos_x = 0;
+	while (pos_x < 500)
+	{
+		pos_y = 0;
+		while (pos_y < 500)
+		{
+			mlx_put_image_to_window(vars.mlx, vars.win, img.img, pos_x, pos_y);
+			pos_y += img_h;
+		}
+		pos_x += img_w;
+	}
+	
 	
 	mlx_hook(vars.win, KeyPress, MASK_KEYPRESS, esc_close, &vars);
 	mlx_hook(vars.win, DestroyNotify, MASK_BUTTONPRESS, x_close, &vars);
