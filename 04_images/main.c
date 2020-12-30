@@ -6,7 +6,7 @@
 /*   By: afukuhar <afukuhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 17:14:42 by afukuhar          #+#    #+#             */
-/*   Updated: 2020/12/30 12:09:54 by afukuhar         ###   ########.fr       */
+/*   Updated: 2020/12/30 12:35:48 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,9 +89,9 @@ int	main(void)
 		while (pos_y < 500)
 		{
 			mlx_put_image_to_window(vars.mlx, vars.win, img.img, pos_x, pos_y);
-			pos_y += img_h;
+			pos_y += img_h - 1;
 		}
-		pos_x += img_w;
+		pos_x += img_w - 1;
 	}
 	
 	
