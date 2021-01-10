@@ -6,17 +6,23 @@
 #    By: afukuhar <afukuhar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/30 15:29:14 by afukuhar          #+#    #+#              #
-#    Updated: 2020/11/19 14:10:27 by afukuhar         ###   ########.fr        #
+#    Updated: 2021/01/10 12:44:39 by afukuhar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 
-CFILES = aux.c draw_*.c
-OFILES = *.o
+CFLAGS = -Wall -Wextra -Werror
 
-test:
-		@$(CC) main.c $(CFILES) -g -lz -L../mlx -lmlx -framework OpenGL -framework AppKit -lm
+LIBS = -L./mlx -lmlx -L./ft_lib -lft
+
+CFILES = *.c
+
+all:
+	@echo creating cub3d ...
+	@$(MAKE) -C ft_lib re
+	@$(MAKE) -C ft_lib clean
+	@$(CC) $(CFILES) -g -lz $(LIBS) -framework OpenGL -framework AppKit -lm -o cub3D
 
 clean:
-		@/bin/rm -f $(OFILES)
+		@/bin/rm -f cub3D

@@ -6,19 +6,19 @@
 #    By: afukuhar <afukuhar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/09 21:54:32 by afukuhar          #+#    #+#              #
-#    Updated: 2021/01/09 22:11:10 by afukuhar         ###   ########.fr        #
+#    Updated: 2021/01/10 11:39:10 by afukuhar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC =		gcc
+CC = gcc
 
-CFLAGS =	-Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
-NAME =		ftlib.a
+NAME = libft.a
 
-CFILES =	ft_libft/*.c ft_get_next_line/*.c ft_printf/*.c
-OFILES =	*.o
-INCLUDES =	./
+CFILES = ft_libft/*.c ft_get_next_line/*.c ft_printf/*.c
+OFILES = *.o
+INCLUDES = ./
 
 all:		$(NAME)
 	@echo Compiling $(NAME)

@@ -6,14 +6,17 @@
 /*   By: afukuhar <afukuhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 12:09:59 by afukuhar          #+#    #+#             */
-/*   Updated: 2020/12/30 16:24:20 by afukuhar         ###   ########.fr       */
+/*   Updated: 2021/01/10 12:42:23 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef 	CUB3D_H
 # define CUB3D_H
 
-#include "../mlx/mlx.h"
+#include "./mlx/mlx.h"
+#include "./ft_lib/ft_libft/libft.h"
+#include "./ft_lib/ft_get_next_line/get_next_line.h"
+#include "./ft_lib/ft_printf/ft_printf.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -69,6 +72,10 @@ int		x_close();
 int		esc_close(int keycode, t_vars *vars);
 int	render_next_frame(t_vars *vars);
 int	change_position(int keycode, t_vars *vars);
+
+# define TILE_SIZE 32
+# define MAP_ROW_NUMBERS 11
+
 
 
 #define MLX_SYNC_IMAGE_WRITABLE		1 
