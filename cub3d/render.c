@@ -6,7 +6,7 @@
 /*   By: afukuhar <afukuhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 16:22:43 by afukuhar          #+#    #+#             */
-/*   Updated: 2020/12/30 16:24:19 by afukuhar         ###   ########.fr       */
+/*   Updated: 2021/01/10 13:19:41 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int	render_next_frame(t_vars *vars)
 	mlx_clear_window(vars->mlx, vars->win);
 	mlx_put_image_to_window(vars->mlx, vars->win, img.img, 0, 0);
 	mlx_sync(MLX_SYNC_WIN_FLUSH_CMD, vars->win);
+	return (0);
 }	
 
 int	change_position(int keycode, t_vars *vars) 
@@ -40,5 +41,6 @@ int	change_position(int keycode, t_vars *vars)
 		vars->pos_y += 10;
 	else if (keycode == KEY_D && vars->pos_y < 475)
 		vars->pos_x += 10;
+	return (0);
 }
 

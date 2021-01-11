@@ -6,7 +6,7 @@
 /*   By: afukuhar <afukuhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 12:09:59 by afukuhar          #+#    #+#             */
-/*   Updated: 2021/01/10 12:42:23 by afukuhar         ###   ########.fr       */
+/*   Updated: 2021/01/11 10:45:02 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,22 @@ typedef struct	s_data
 	int		endian;
 }				t_data;
 
+typedef struct	s_map
+{
+	int		tile_size;
+	int		num_rows;
+	int		num_cols;
+	int		win_w;
+	int		win_h;
+}				t_map;
+
+typedef struct					s_cub3d
+{
+	t_vars						vars;
+	t_data						data;
+	t_map						map;
+}								t_cub3d;
+
 typedef struct	s_point
 {
 	int x;
@@ -60,6 +76,9 @@ typedef struct	s_polygon
 	int sides;
 }				t_polygon;
 
+int		c3_init_map(t_cub3d *cub3d);
+int		c3_init_mlx(t_cub3d *cub3d);
+
 void	my_mlx_pixel_put(t_data *data, t_point p, int color);
 void	draw_circle(t_data *data, int radius, t_point c, int color);
 char	axis_loop(t_point p1, t_point p2);
@@ -69,7 +88,7 @@ void	draw_nsides(t_data *data, t_polygon polygon, int color);
 void	set_polygon(t_point c, int sides, int radius, t_polygon *polygon);
 void	set_point(int x, int y, t_point *p);
 int		x_close();
-int		esc_close(int keycode, t_vars *vars);
+int		esc_close(int keycode, t_cub3d *cub3d);
 int	render_next_frame(t_vars *vars);
 int	change_position(int keycode, t_vars *vars);
 

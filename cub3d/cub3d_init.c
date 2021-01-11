@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   close.c                                            :+:      :+:    :+:   */
+/*   cub3d_init.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afukuhar <afukuhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/30 16:20:12 by afukuhar          #+#    #+#             */
-/*   Updated: 2021/01/10 16:28:50 by afukuhar         ###   ########.fr       */
+/*   Created: 2021/01/10 14:41:43 by afukuhar          #+#    #+#             */
+/*   Updated: 2021/01/10 16:24:44 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-int             x_close()
+int		c3_init_map(t_cub3d *cub3d)
 {
-	printf("closing with x\n");
-	exit(1);
+	cub3d->map.tile_size = 25;
+	cub3d->map.num_rows = 20;
+	cub3d->map.num_cols = 20;
+	cub3d->map.win_h = cub3d->map.tile_size * cub3d->map.num_rows;
+	cub3d->map.win_w = cub3d->map.tile_size * cub3d->map.num_cols;
 	return (0);
 }
 
-int				esc_close(int keycode, t_cub3d *cub3d)
+int		c3_init_mlx(t_cub3d *cub3d)
 {
-	if (keycode == KEY_ESC)
-	{
-		printf("closing with esc\n");
-		exit(1);
-	}
+	cub3d->vars.mlx = mlx_init();
+	cub3d->vars.win = mlx_new_window(cub3d->vars.mlx, cub3d->map.win_w, cub3d->map.win_h, "Reading a map");
 	return (0);
 }
